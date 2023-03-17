@@ -1,24 +1,33 @@
 // import './App.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import Greeting from "./component/greeting";
+import Time from "./component/conter/time";
+import InputTodos from "./component/conter/inputTodo";
+import Todos from "./component/bottom/Todos";
 
 function App() {
-  const [userName, setUserName] = useState("");
-  
-  function userNameSubmit(event){
-    event.preventDefault();
-    
-    console.log(event.target[0].value)
+  const [userName, setUserName] = useState();
 
-  }
- 
   return (
     <div>
-      <h1>Hello, what's your name?</h1>
-      <form onSubmit={userNameSubmit}>
-        <input />
-      </form>
+        <section>
+            
+        </section>
+        <main>
+            <Time/>
+            <InputTodos/>
+        </main>
+        <section>
+            <Todos/>
+        </section>
     </div>
+    
   );
-}
 
-export default App;
+}
+   
+    
+  
+  export default App;
+  
