@@ -1,25 +1,37 @@
-// import './App.css';
+
+import styles from "src/App.module.css"
 import { useState, useEffect } from "react";
 
+
 import Greeting from "./component/greeting";
-import Time from "./component/conter/time";
-import InputTodos from "./component/conter/inputTodo";
-import Todos from "./component/bottom/Todos";
+
+import Link from "./component/top/link";
+import Weather from "./component/top/weather";
+import Time from "./component/center/time";
+import InputTodos from "./component/center/inputTodo";
+import Todos from "./component/bottom/todos";
+import Quotes from "./component/bottom/quotes";
 
 function App() {
   const [userName, setUserName] = useState();
 
   return (
-    <div>
-        <section>
+    
+    <div className={styles.sections}>
+     
+        <section className={styles.section}>
+          <Link state={userName}/>
+          <Weather state={userName}/>
             
         </section>
-        <main>
-            <Time/>
-            <InputTodos/>
+        <main className={styles.section}>
+            <Time state={userName}/>
+            <InputTodos state={userName}/>
         </main>
-        <section>
-            <Todos/>
+        <section className={styles.section}>
+            
+            <Quotes state={userName}/>
+            <Todos state={userName}/>
         </section>
     </div>
     

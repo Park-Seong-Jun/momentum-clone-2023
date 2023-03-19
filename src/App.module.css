@@ -1,0 +1,33 @@
+.sections {
+    width:100%;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+}
+
+.section {
+    border:1px solid black;
+    background-color: aqua;
+    width:inherit;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.section:nth-child(2){
+    justify-content: center;
+}
+
+.todo {
+    position: relative;
+}
+.todo_input {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    background-color: white;
+    
+}
